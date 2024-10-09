@@ -16,7 +16,7 @@ A ``typst`` package for creating **O'RLY?**-style cover pages.
     title: "Learn to Stop Worrying and Love Metathesis",
     top-text: "Axe nat why (or do)",
     subtitle: "Free yourself from prescriptivism",
-    pic: "chomskoz.png",
+    pic: "chomskydoz.png",
     signature: "Dr. N. Supponent"
 )
 ```
