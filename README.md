@@ -8,7 +8,7 @@ A ``typst`` package for creating **O'RLY?**-style cover pages.
 
 ## Example
 
-```typst
+```rust
 #import "@preview/o-rly-typst:0.1.0": *
 
 #orly(
