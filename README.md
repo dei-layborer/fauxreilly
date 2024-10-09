@@ -38,7 +38,7 @@ Data types listed are based on ``typst``'s internal types, so are entered the sa
 
 Option | Description | Type | Default |
 | :----- | :------- | :-------: | :-------: |
-| ``font`` | The font for all text except the "publisher" in the bottom-left corner | [``string(s)`Web UI/UX engineer – Paris 🇫🇷 `](https://typst.app/docs/reference/text/text/#parameters-font) |  Whatever is set in the document context |
+| ``font`` | The font for all text except the "publisher" in the bottom-left corner | [``string(s)``](https://typst.app/docs/reference/text/text/#parameters-font) |  Whatever is set in the document context |
 | ``color`` | Accent color.  Used for the background of the title block and of the colored bar at the very top. | [``color``](https://typst.app/docs/reference/visualize/color/) | ``blue`` (typst built-in) |
 | ``top-text`` | The text at the top, just under the color bar | [``string``](https://typst.app/docs/reference/foundations/str/) | Empty |
 | ``pic`` | Image to be used above the title block | [``string``](https://typst.app/docs/reference/visualize/image/#parameters-path) with path to the image | Empty |
