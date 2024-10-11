@@ -23,7 +23,7 @@ A ``typst`` package for creating **O'RLY?**-style cover pages.
 
 ## Usage
 
-First, import the package at the top of your ``typst`` file.  I'm working on getting it submitted to typst universe, but in the meantime, you'll need to do so manually.  See [the documentation](https://typst.app/docs/reference/scripting/#modules) on importing a module for specifics.
+First, import the package at the top of your ``typst`` file.  I'm working on getting it submitted to ``typst universe``, but in the meantime, you'll need to do so manually.  See [the documentation](https://typst.app/docs/reference/scripting/#modules) on importing a module for specifics.
 
 Only one function is exposed, ``#orly()``.  This will create its own page in the document at whatever location you call the function.  In other words, any content in the ``typst`` document that appears before ``#orly()`` is called will be before the O'Rly? page in the PDF that ``typst`` renders.  Anything after the function call will be on subsequent page(s).
 
