@@ -74,7 +74,7 @@ I put this whole thing together in an afternoon when I should've been doing work
 
 It hopefully goes without saying that the same is true if something breaks!
 
-Tested on ``typst`` versions ``0.11.1`` and ``0.12.0-rc1``.
+Tested on ``typst`` versions ``0.11.1`` and ``0.12.0``.
 
 ## Thanks & Shout-Outs
 
