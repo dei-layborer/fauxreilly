@@ -8,7 +8,9 @@ A ``typst`` package for creating **O'RLY?**-style cover pages.
 
 ## Example
 
-```rust
+```typst
+#import "@preview/fauxreilly:0.1.1": orly
+
 #orly(
     color: rgb("#85144b"),
     title: "Learn to Stop Worrying and Love Metathesis",
@@ -23,11 +25,15 @@ A ``typst`` package for creating **O'RLY?**-style cover pages.
 
 ## Usage
 
-First, import the package at the top of your ``typst`` file.  I'm working on getting it submitted to ``typst universe``, but in the meantime, you'll need to do so manually.  See [the documentation](https://typst.app/docs/reference/scripting/#modules) on importing a module for specifics.
+Import the package in your Typst file:
 
-Only one function is exposed, ``#orly()``.  This will create its own page in the document at whatever location you call the function.  In other words, any content in the ``typst`` document that appears before ``#orly()`` is called will be before the O'Rly? page in the PDF that ``typst`` renders.  Anything after the function call will be on subsequent page(s).
+```typst
+#import "@preview/fauxreilly:0.1.1": orly
+```
 
-All content for the title page is passed as options to ``#orly()``.  I included what I figured were the most likely things you'd want to customize without having a million options.  Meanwhile, most of the layout parameters (font sizes, the heights of individual pieces, etc.) are variables within the code, so hopefully aren't too hard to alter if need-be.  None of the options are strictly required, although the text fields are the only ones that can be left empty without potentially breaking the layout.   A few have defaults instead, and those are listed below where applicable.
+Only one function is exposed, ``#orly()``.  This will create its own page in the document at whatever location you call the function.  In other words, any content in the ``typst`` document that appears before ``#orly()`` is called will appear before the O'Rly? page in the PDF that ``typst`` renders.  Anything after the function call will be on subsequent page(s).
+
+All content for the title page is passed as options to ``#orly()``.  I included what I figured were the most likely things you'd want to customize without having a million options.  Meanwhile, most of the layout parameters (font sizes, the heights of individual pieces, etc.) are variables within the code, so hopefully aren't too hard to alter if need-be.  None of the options are strictly required, although the text fields are the only ones that can be left empty without potentially breaking the layout. A few have defaults instead, and those are listed below where applicable.
 
 ### Options
 The order that the options appear in the table is the order they must be sent to the function, unless you specify the option's key along with its value.
@@ -39,7 +45,7 @@ Option | Description | Type | Default |
 | ``font`` | The font for all text except the "publisher" in the bottom-left corner | [``string(s)``](https://typst.app/docs/reference/text/text/#parameters-font) |  Whatever is set in the document context |
 | ``color`` | Accent color.  Used for the background of the title block and of the colored bar at the very top. | [``color``](https://typst.app/docs/reference/visualize/color/) | ``blue`` (typst built-in) |
 | ``top-text`` | The text at the top, just under the color bar | [``string``](https://typst.app/docs/reference/foundations/str/) | Empty |
-| ``pic`` | Image to be used above the title block | [``string``](https://typst.app/docs/reference/visualize/image/#parameters-path) with path to the image | Empty |
+| ``pic`` | Content to be used above the title block. Usually an [``image``](https://typst.app/docs/reference/visualize/image/), but may be any other ``content``, like a CeTZ drawing. | [``string``](https://typst.app/docs/reference/visualize/image/#parameters-path) or ``content`` | Empty |
 | ``title`` | The title of the book | [``string``](https://typst.app/docs/reference/foundations/str/) | Empty |
 | ``title-align`` | How the text is aligned (horizontally) in the title block | [``alignment``](https://typst.app/docs/reference/layout/alignment/) | ``left`` |
 | ``subtitle`` | Text that appears just below the title block | [``string``](https://typst.app/docs/reference/foundations/str/) | Empty |
